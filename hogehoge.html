@@ -1,0 +1,218 @@
+<html>
+<head>
+<meta charset='utf-8'>
+<style>
+
+
+/* vietnamese */
+@font-face {
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Inconsolata Regular'), local('Inconsolata-Regular'), url(https://fonts.gstatic.com/s/inconsolata/v18/QldKNThLqRwH-OJ1UHjlKGlW5qhWxg.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Inconsolata Regular'), local('Inconsolata-Regular'), url(https://fonts.gstatic.com/s/inconsolata/v18/QldKNThLqRwH-OJ1UHjlKGlX5qhWxg.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Inconsolata Regular'), local('Inconsolata-Regular'), url(https://fonts.gstatic.com/s/inconsolata/v18/QldKNThLqRwH-OJ1UHjlKGlZ5qg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+p{
+    font-family: sans;
+    font-weight: bold;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: sans;
+    color: #222;
+    background-color: #fdfdfd;
+    width: auto;
+    margin: 10%;
+    margin-top: 2em;
+}
+
+.buttons{
+    margin: 1em 0;
+    display: table;
+    width: auto;;
+    text-align: center;
+}
+
+button{
+ display: inline-block;
+ padding: 6px 12px;
+ margin-bottom: 0px;
+ font-size: 14px;
+ font-weight: normal;
+ line-height: 1.42857;
+ text-align: center;
+ white-space: nowrap;
+ vertical-align: middle;
+ cursor: pointer;
+ border: 1px solid transparent;
+ border-radius: 4px 4px 4px 4px;
+ -moz-user-select: none;
+ color: rgb(51, 51, 51);
+ background-color: rgb(255, 255, 255);
+ border-color: rgb(204, 204, 204);
+ color: rgb(255, 255, 255);
+ background-color: rgb(66, 139, 202);
+ border-color: rgb(53, 126, 189);
+}
+
+button:hover, button:focus, button:active{
+ color: rgb(255, 255, 255);
+ background-color: rgb(50, 118, 177);
+ border-color: rgb(40, 94, 142);
+}
+
+.CodeMirror{
+ border: 1px solid #ddd;
+}
+
+.jh-root {
+    font-family: 'Inconsolata' ;
+}
+
+.jh-root, .jh-type-object, .jh-type-array, .jh-key, .jh-value, .jh-root tr{
+ -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+ -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+ box-sizing: border-box;         /* Opera/IE 8+ */
+ font-weight: bold;
+}
+
+.jh-key, .jh-value{
+ margin: 0;
+ padding: 0.2em;
+ font-weight: bold;
+}
+
+.jh-value{
+    border-left: 1px solid #ddd;
+}
+
+.jh-type-number{
+    text-align: center;
+    color: #5286BC;
+}
+
+.jh-type-bool-true{
+    text-align: center;
+    color: #5A811C;
+}
+
+.jh-type-bool-false{
+    text-align: center;
+    color: #D45317;
+}
+
+.jh-type-bool-image {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    vertical-align: bottom;
+}
+
+.jh-type-string{
+    font-style: italic;
+    color: #6E6E6E;
+}
+
+.jh-array-key{
+    font-style: italic;
+    font-size: small;
+    text-align: center;
+}
+
+.jh-object-key, .jh-array-key{
+    color: #444;
+    vertical-align: top;
+}
+
+.jh-type-object, {
+    width: 100%;
+}
+
+.jh-type-object > tbody > tr:nth-child(odd), .jh-type-array > tbody > tr:nth-child(odd){
+    background-color: #f5f5f5;
+}
+
+.jh-type-object > tbody > tr:nth-child(even), .jh-type-array > tbody > tr:nth-child(even){
+    background-color: #fff;
+}
+
+.jh-type-object, .jh-type-array{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.jh-root{
+ border: 1px solid #ccc;
+ margin: 0.2em;
+}
+
+th.jh-key{
+ text-align: left;
+}
+
+.jh-type-object > tbody > tr, .jh-type-array > tbody > tr{
+ border: 1px solid #ddd;
+ border-bottom: none;
+}
+
+.jh-type-object > tbody > tr:last-child, .jh-type-array > tbody > tr:last-child{
+ border-bottom: 1px solid #ddd;
+}
+
+.jh-type-object > tbody > tr:hover, .jh-type-array > tbody > tr:hover{
+ border: 1px solid #F99927;
+}
+
+.jh-empty{
+ font-style: italic;
+ color: #999;
+ font-size: small;
+}
+
+.jh-a {
+    text-decoration: none;
+}
+
+.jh-a:hover{
+    text-decoration: underline;
+}
+
+.jh-a span.jh-type-string {
+    text-decoration: none;
+    color : #268ddd;
+    font-style: normal;
+}
+
+</style>
+</head>
+
+<body>
+<p>テストサイト</p>
+
+hogehoge
+
+</body>
+
+</html>
